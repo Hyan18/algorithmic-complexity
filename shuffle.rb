@@ -25,6 +25,16 @@ def fy_shuffle(array)
   arr
 end
 
+def io_shuffle(array)
+  new_arr = []
+  for i in 0...(array.length)
+    j = rand(i+1)
+    new_arr[i], new_arr[j] = new_arr[j], new_arr[i]  if j != i
+    new_arr[j] = array[i]
+  end
+  new_arr
+end
+
 for i in 1..count do
   size = a*i
   arr = ((1..size).to_a).shuffle
@@ -33,7 +43,7 @@ for i in 1..count do
   times = 100
 
   for i in 1..times do
-    results << Benchmark.realtime { fy_shuffle(arr) }
+    results << Benchmark.realtime { io_shuffle(arr) }
   end
   out = times*0.05
 
