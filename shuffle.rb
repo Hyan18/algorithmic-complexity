@@ -11,7 +11,7 @@ def bad_shuffle(array)
     i = rand(arr.length)
     new_arr << arr.delete_at(i)
   end
-  return new_arr
+  new_arr
 end
 
 def fy_shuffle(array)
@@ -43,7 +43,7 @@ for i in 1..count do
   times = 100
 
   for i in 1..times do
-    results << Benchmark.realtime { io_shuffle(arr) }
+    results << Benchmark.realtime { bad_shuffle(arr) }
   end
   out = times*0.05
 

@@ -7,4 +7,4 @@ A repo where I experiment with algorithmic complexity, which includes taking a l
 
 ## Algorithms
 
-- [Shuffle](shuffle.md)
+- [Shuffle](shuffle.md) with [blogpost](https://dev.to/hyan18/algorithmic-complexity-shuffle-4nah)
