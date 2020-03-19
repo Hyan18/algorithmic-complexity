@@ -1,4 +1,4 @@
-# Use IRB
+require 'set'
 
 states_needed = Set["mt", "wa", "or", "id", "nv", "ut", "ca", "az"]
 
