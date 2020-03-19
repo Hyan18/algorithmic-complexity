@@ -15,7 +15,7 @@ def search(name, graph)
   search_queue = Deque.new
   search_queue.add(graph[name])
   searched = {}
-  while search_queue
+  while !search_queue.empty?
     person = search_queue.pop
     if !searched[person]
       if person_is_seller(person)

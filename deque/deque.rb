@@ -29,7 +29,11 @@ class Deque
     return popped
   end
 
-  def add(array)
-    array.each { |value| self.push(value) }
+  def add(collection)
+    collection.each { |value| self.push(value) }
+  end
+
+  def empty?
+    @first == nil && @last == nil
   end
 end
