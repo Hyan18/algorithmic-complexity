@@ -36,4 +36,12 @@ class Deque
   def empty?
     @first == nil && @last == nil
   end
+
+  def first
+    @first
+  end
+
+  def last
+    @last
+  end
 end

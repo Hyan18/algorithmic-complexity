@@ -119,7 +119,7 @@ def has_loop?(graph)
 end
 
 
-## Faster Solution
+## Simpler Solution
 
 def color_graph(graph, colors)
 
