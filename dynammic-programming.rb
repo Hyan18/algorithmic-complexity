@@ -38,16 +38,9 @@ def longest_common_subsequence(string_1,string_2)
           cell[i][j] = cell[i-1][j-1] + 1
         end
       else
-        if i == 0
-          top = 0
-        else
-          top = cell[i-1][j]
-        end
-        if j == 9
-          left = 0
-        else
-          left = cell[i][j-1]
-        end
+        top, left = 0, 0
+        top = cell[i-1][j] if i != 0
+        left = cell[i][j-1] if j != 0
         cell[i][j] = [top, left].max
       end
     end
