@@ -1,5 +1,6 @@
 require 'set'
 require './deque/deque.rb'
+require 'benchmark'
 
 ALL_COLORS = ["red", "blue", "green", "yellow"]
 
@@ -118,7 +119,6 @@ def has_loop?(graph)
   false
 end
 
-
 ## Simpler Solution
 
 def color_graph(graph, colors)
@@ -137,11 +137,13 @@ def color_graph(graph, colors)
   end
 end
 
-puts colour(graph)
+# puts colour(graph)
 
 # color_graph(graph, ALL_COLORS)
 # result = {}
 # graph.map { |node| result[node.label] =  node.color }
 # puts result
 
+# puts Benchmark.realtime { colour(graph) }
+puts Benchmark.realtime { color_graph(graph, ALL_COLORS) }
 
