@@ -9,6 +9,10 @@ describe 'InsertionSort' do
     expect(InsertionSort.run([1,3,2])).to eq([1,2,3])
   end
 
+  it 'should return [1,1,2] when given [1,2,1]' do
+    expect(InsertionSort.run([1,2,1])).to eq([1,1,2])
+  end
+
   it 'should return [1,3,4,7,10] when given [7,10,1,4,3]' do
     expect(InsertionSort.run([7,10,1,4,3])).to eq([1,3,4,7,10])
   end
