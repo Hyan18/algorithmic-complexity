@@ -43,4 +43,4 @@ def runtime(a, b)
   end
 end
 
-runtime(a,b)
+# runtime(a,b)

@@ -33,4 +33,4 @@ module MostFrequent
 
 end
 
-runtime(MostFrequent)
+# runtime(MostFrequent)
