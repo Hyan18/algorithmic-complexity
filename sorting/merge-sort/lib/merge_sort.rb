@@ -7,7 +7,8 @@ module MergeSort
   end
 
   def self.TopDownSplitMerge(b, start, finish, a)
-    return a if (finish - start < 2) # Base case: An array of one element is sorted
+    return if (finish - start < 2) # Base case: An array of one element is sorted
+    
     middle = (finish + start) / 2
     # Recursively sort both runs from array a into array b
     TopDownSplitMerge(a, start, middle, b) # Sort the left run
