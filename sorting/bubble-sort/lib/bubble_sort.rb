@@ -15,3 +15,7 @@ module BubbleSort
   end
 
 end
+
+require './runtime.rb'
+
+runtime(BubbleSort)

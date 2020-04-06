@@ -18,3 +18,7 @@ module SelectionSort
   end
 
 end
+
+require './runtime.rb'
+
+runtime(SelectionSort)

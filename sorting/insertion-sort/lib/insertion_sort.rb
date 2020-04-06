@@ -15,3 +15,7 @@ module InsertionSort
   end
 
 end
+
+require './runtime.rb'
+
+runtime(InsertionSort)

@@ -19,3 +19,7 @@ module QuickSort
   end
 
 end
+
+require './runtime.rb'
+
+runtime(QuickSort)

@@ -32,3 +32,7 @@ module MergeSort
   end
 
 end
+
+require './runtime.rb'
+
+runtime(MergeSort)
