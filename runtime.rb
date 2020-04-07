@@ -1,6 +1,6 @@
 require 'benchmark'
 
-def runtime(algorithm, a = 50, b = 1000)
+def runtime(algorithm, a = 500, b = 10000)
   count = b / a
   for i in 1..count do
     size = a*i
