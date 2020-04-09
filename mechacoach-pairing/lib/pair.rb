@@ -1,5 +1,6 @@
 module Pair
   def self.run(names)
+    names << "Flying Solo" if names.length % 2 == 1
     pairs = names.length / 2
     pairings = []
     seen_pairs = {}
