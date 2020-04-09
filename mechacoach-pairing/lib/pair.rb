@@ -1,17 +1,34 @@
 module Pair
   def self.run(names)
-    return [[names]] if names.length == 2
-
-    indices = (0...(names.length)).to_a
-    pairing = []
+    pairs = names.length / 2
+    pairings = []
+    seen_pairs = {}
     for i in 1...(names.length)
-      day = []
-      day << [names[0], names[i]]
-      left = indices - [0, i]
-      left.map! { |x| names[x] }
-      day << left
-      pairing << day
+      seen_name = {}
+      day_pairs = []
+      for j in 1..pairs
+        pair = []
+
+        names.each do |name|
+          unless seen_name[name]
+            seen_name[name] = true
+            # Boolean to check if taking this pair forces last pair to be one already seen
+            last_pair_seen = j == (pairs - 1) && seen_pairs[(names - seen_name.keys)]
+            pair << name
+            if seen_pairs[pair] || last_pair_seen
+              seen_name.delete(name)
+              pair.pop
+            end
+            break if pair.length == 2
+          end
+        end
+
+        day_pairs << pair
+        seen_pairs[pair] = true
+      end
+
+      pairings << day_pairs
     end
-    return pairing
+    return pairings
   end
 end
