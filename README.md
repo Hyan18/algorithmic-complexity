@@ -13,6 +13,7 @@ A repo where I experiment with algorithmic complexity, which includes taking a l
 - [Most Frequent](https://github.com/Hyan18/algorithmic-complexity/tree/master/most-frequent)
 - [Fibonacci](https://github.com/Hyan18/algorithmic-complexity/tree/master/fibonacci)
 - [Sorting](https://github.com/Hyan18/algorithmic-complexity/tree/master/sorting) with [blogpost](https://dev.to/hyan18/sorting-algorithms-4851)
+- [Mechacoach Pairing](https://github.com/Hyan18/algorithmic-complexity/tree/master/mechacoach-pairing)
 
 ## Blog
 
