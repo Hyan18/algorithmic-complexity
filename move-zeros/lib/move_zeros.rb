@@ -2,9 +2,10 @@ module MoveZeros
   def self.run(array)
     # In-place without making a copy of the array
     i = 0
+    j = 2
     while i < array.length - 1
       if array[i] == 0
-        j = 1
+        j -= 1
         while array[i+j] == 0 && (i+j < array.length - 1)
           j += 1
         end
@@ -32,8 +33,8 @@ end
 
 require 'benchmark'
 
-a = 50
-b = 1000
+a = 500
+b = 50000
 
 count = b / a
 for i in 1..count do
@@ -46,7 +47,7 @@ for i in 1..count do
   times = 100
 
   for i in 1..times do
-    results << Benchmark.realtime { MoveZeros.alt(arr) }
+    results << Benchmark.realtime { MoveZeros.run(arr) }
   end
   out = times*0.05
 
